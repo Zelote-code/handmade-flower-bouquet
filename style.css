@@ -14,11 +14,38 @@ body {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-brand {
-    font-weight: bold;
-    color: #b84f56;
-    text-transform: uppercase;
+/* Logo Styles */
+.logo {
+    display: inline-block; /* Makes the anchor behave like an inline-block for better control */
+    text-decoration: none; /* Removes underline */
+    padding: 5px; /* Adds slight padding around the logo */
 }
+
+.logo img {
+    max-width: 60px; /* Adjust to desired logo size */
+    display: block; /* Removes inline spacing around the image */
+    transition: transform 0.3s ease-in-out; /* Adds smooth scaling effect on hover */
+}
+
+/* Logo Hover Effect */
+.logo:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .logo img {
+        max-width: 120px; /* Slightly smaller logo for tablets */
+    }
+}
+
+@media (max-width: 400px) {
+    .logo img {
+        max-width: 100px; /* Further reduce logo size for smaller screens */
+    }
+}
+
+
 
 .navbar-nav .nav-link {
     color: #b84f56;
